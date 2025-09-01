@@ -7,5 +7,35 @@
 <body>
   <h1>Welcome to The Aces – Class of 1964</h1>
   <p>This is our private space for music, memories, and connection.</p>
+<section id="music">
+  <h2>🎶 Music Requests</h2>
+  <p>Share your favorite songs and let’s build our class playlist!</p>
+  <form id="music-form">
+    <input type="text" id="music-link" placeholder="Paste YouTube or Amazon Music link" required />
+    <button type="submit">Request Song</button>
+  </form>
+  <div id="playlist">
+    <!-- Requested songs will appear here -->
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('music-form');
+  const playlist = document.getElementById('playlist');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const link = document.getElementById('music-link').value;
+    if (link.includes('youtube.com') || link.includes('youtu.be')) {
+      const videoId = link.split('v=')[1]?.split('&')[0] || link.split('/').pop();
+      const embed = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+      playlist.innerHTML += embed;
+    } else {
+      playlist.innerHTML += `<p><a href="${link}" target="_blank">🎵 Listen on Amazon Music</a></p>`;
+    }
+    document.getElementById('music-link').value = '';
+  });
+</script>
+
 </body>
 </html>
