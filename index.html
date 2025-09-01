@@ -18,6 +18,28 @@
     <!-- Requested songs will appear here -->
   </div>
 </section>
+<section id="chat">
+  <h2>💬 Classmate Chat</h2>
+  <div id="chat-box"></div>
+  <textarea id="chat-input" placeholder="Type your message..."></textarea>
+  <button onclick="sendMessage()">Send</button>
+</section>
+
+<script>
+  const chatBox = document.getElementById('chat-box');
+  const chatInput = document.getElementById('chat-input');
+
+  function sendMessage() {
+    const message = chatInput.value.trim();
+    if (message) {
+      const time = new Date().toLocaleTimeString();
+      const entry = `<p><strong>You:</strong> ${message} <em>(${time})</em></p>`;
+      chatBox.innerHTML += entry;
+      chatInput.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  }
+</script>
 
 <script>
   const form = document.getElementById('music-form');
