@@ -134,4 +134,28 @@ footer {
 #topBtn:hover {
   background-color: #7a6f5f;
 }
+.month-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.month-nav a {
+  text-decoration: none;
+  padding: 8px 14px;
+  background-color: #f3ede4;
+  color: #5a4e3c;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.month-nav a:hover {
+  background-color: #e0d6c5;
+  transform: scale(1.05);
+}
+
 
