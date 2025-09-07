@@ -7,25 +7,24 @@
 </head>
 <body>
   <h1>Laguna Institute Aces – Login</h1>
- <form id="loginForm">
+<form id="loginForm">
   <label>
-    Username (always use "LI64Aces"):<br/>
+    Username (always use “LI64Aces”):<br/>
     <input id="username" type="text" required />
   </label>
   <br/><br/>
   <label>
-    Password (First and Last Name):<br/>
-    <input id="password" type="password" required autocomplete="current-password" />
+    Password (your full name):<br/>
+    <input id="password" type="password" required />
   </label>
   <br/><br/>
   <label>
     PIN:<br/>
-    <input id="pin" type="text" required minlength="4" maxlength="4" autocomplete="off" />
+    <input id="pin" type="text" required minlength="4" maxlength="4" />
   </label>
   <br/><br/>
   <button type="submit">Login</button>
 </form>
-  <!-- Link to our login logic -->
-  <script src="login.js"></script>
+<script src="login.js"></script>
 </body>
 </html>
