@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+<script src="login.js"></script>
+<script>
+  // If they didn’t come from login.html, send them back
+  if (!document.referrer.endsWith('login.html')) {
+    window.location.replace('login.html');
+  }
+</script>
+
 <head>
   <title>Laguna Institute Aces – Class of 1964</title>
   <link rel="stylesheet" href="style.css">
