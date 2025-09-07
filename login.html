@@ -9,18 +9,31 @@
   <h1>Laguna Institute Aces – Login</h1>
   <form id="loginForm">
     <label>
-      Username:<br/>
+   Username:<br/>
       <input id="username" type="text" required />
     </label>
     <br/><br/>
     <label>
-      Password:<br/>
-      <input id="password" type="password" required />
+   Password:<br/>
+     <input type="password" … />
+     <input
+       id="password"
+       name="password"
+       type="password"
+       autocomplete="current-password"
+       required/>
     </label>
     <br/><br/>
     <label>
-      PIN:<br/>
-      <input id="pin" type="password" required minlength="4" maxlength="4"/>
+   PIN:<br/>
+    <input
+       id="pin"
+       name="pin"
+       type="text"
+       autocomplete="off"
+       required
+       minlength="4"
+       maxlength="4"/>
     </label>
     <br/><br/>
     <button type="submit">Login</button>
