@@ -2,11 +2,11 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  const userInput = document.getElementById('username').value.trim();
+  const userInput = document.getElementById('username').value.trim().toLowerCase();
   const passInput = document.getElementById('password').value.trim().toLowerCase();
   const pinInput  = document.getElementById('pin').value.trim();
 
-  const USERNAME = 'li64aces';
+  const USERNAME = 'LI64Aces';
   const PIN = '1964';
 
   // List of valid classmate names
@@ -65,9 +65,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   ];
 
   if (
-    userInput === USERNAME &&
-    validNames.includes(passInput) &&
-    pinInput === PIN
+    userInput === 'LI64Aces' &&
+    validNames.includes(passInput.toLowerCase() &&
+    pinInput === '1964'
   ) {
     window.location.href = 'index.html';
   } else {
